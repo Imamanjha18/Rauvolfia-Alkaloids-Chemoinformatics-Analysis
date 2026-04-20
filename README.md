@@ -75,7 +75,7 @@ Phytochemicals of Rauvolfia serpentina were retrieved from IMPPAT and NPASS data
 
 Final curated dataset: 121 compounds
 
-### 3\. CMAUP Croos-validation
+### 3\. CMAUP Cross-validation
 
 Tool used: CMAUP;
 
