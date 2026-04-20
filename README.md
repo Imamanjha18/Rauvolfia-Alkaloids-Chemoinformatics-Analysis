@@ -33,9 +33,10 @@ This project integrates multiple bioinformatics and chemoinformatics approaches 
 
 ### Source Databases
 
-1. IMPPAT – Indian Medicinal Plants, Phytochemistry And Therapeutics
-2. NPASS – Natural Product Activity & Species Source Database
-3. CMAUP – Collective Molecular Activities of Useful Plants
+1. IMPPAT – Indian Medicinal Plants, Phytochemistry And Therapeutics (https://cb.imsc.res.in/imppat/)
+2. NPASS – Natural Product Activity & Species Source Database (https://bidd.group/NPASS/)
+3. CMAUP – Collective Molecular Activities of Useful Plants (https://bidd.group/CMAUP/)
+
 
 ### Organism
 
@@ -89,36 +90,56 @@ Result:
 - Used as validation layer rather than primary data source
 
 
-### 4\. Hub Gene Identification
+### 4\. Alkaloid Classification
 
-Tool used: Cytoscape (cytoHubba);
-Method: Degree centrality
+Tool used: ClassyFire
 
-Tol 10 Hub genes: EZH2, CCNB1, RAD51, BUB1B, NUF2, UHRF1, KIF2C, HDAC1, ASPM, ESPL1
+- Compounds classified based on chemical taxonomy
+- Selected compounds with superclass: Alkaloids and derivatives
 
-### 5\. Module Detection
+Final selection: 67 alkaloids
 
-Tool used: Cytoscape (MCODE);
+### 5\. Drug-likeness Analysis
 
-top MCODE cluster (functional module):
-Score - 10.6;
-Nodes - 11;
-Edges - 53 (highly interconnected)
+Tool used: SwissADME
 
-Genes: NUF2, EZH2, HMMR, ESPL1, SKA3, UHRF1, CCNB1, BUB1B, RAD51, ASPM, KIF2C
+Parameters evaluated:
 
-### 6\. Final Key Genes
+- Molecular Weight (MW)
+- LogP
+- Topological Polar Surface Area (TPSA)
+- Lipinski’s Rule of Five
+- GI Absorption
 
-Genes were finalized from the intersection of Hub genes (cytoHubba) and top MCODE cluster: EZH2, CCNB1, RAD51, BUB1B, NUF2, UHRF1, KIF2C, ASPM, ESPL1
+Result:
 
-### 7\. Regulatory Network Analysis
+- Majority of compounds satisfied Lipinski’s criteria
+- Only a small subset showed violations (10)
 
-Tool used: NetworkAnalyst
+### 6\. Chemical Space Analysis
 
-1. Transcription Factors (TFs):
-ELF1, KDM5A, KLF9, KLF1, POLR2A, IRF1, ZNF175, ZNF263
-2. miRNAs:
-hsa-miR-193b-3p, hsa-let-7a-5p, hsa-let-7b-5p, hsa-miR-192-5p, hsa-miR-215-5p, hsa-miR-124-3p, hsa-miR-25-3p, hsa-miR-92a-3p
+Tool used: ClustVis
+
+- PCA performed using key physicochemical descriptors
+- PC1 (~64%) and PC2 (~27%) explained ~90% variance
+- Visualization revealed:
+[I] Dense main cluster
+[II] Secondary cluster
+[III] Distinct outliers
+
+### 7\. Representative Compound Selection
+
+Selection based on PCA distribution:
+
+- Main cluster compounds (representative structures)
+- Secondary cluster compounds (moderate diversity)
+- Outliers (extreme chemical diversity)
+
+Final selected compounds:
+
+RS_02, RS_04, RS_05, RS_13, RS_14, RS_18,
+RS_21, RS_24, RS_44, RS_54, RS_40, RS_65
+
 
 ### 8\. Drug Enrichment Analysis
 
