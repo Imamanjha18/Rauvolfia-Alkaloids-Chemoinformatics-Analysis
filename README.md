@@ -45,52 +45,49 @@ Rauvolfia serpentina
 
 |Step|Output|
 |-|-|
-|Total compounds collected |16605|
-|Unique compounds after curation |124|
-|Alkaloid selected|8|
-|Final compounds for analysis |8|
+|Total compounds collected |285|
+|Unique compounds after curation |121|
+|Alkaloid selected|67|
+|Final compounds for analysis |12|
+
+## Tools & Resources
+1. SwissADME – Drug-likeness prediction (https://www.swissadme.ch/)
+2. ClustVis – PCA & heatmap visualization (https://biit.cs.ut.ee/clustvis/)
+3. SwissTargetPrediction – Target prediction (https://www.swisstargetprediction.ch/) 
+4. PubChem – Chemical data retrieval (https://pubchem.ncbi.nlm.nih.gov/)
+5. ClassyFire – Chemical classification (http://classyfire.wishartlab.com/)
 
 
 ## Methodology
 
-### 1\. DEG Identification
+### 1\. Phytochemical Collection 
 
-Tool used: GEO2R (https://www.ncbi.nlm.nih.gov/geo/geo2r/);
-Genes were considered differentially expressed based on:
+Phytochemicals of Rauvolfia serpentina were retrieved from IMPPAT and NPASS databases.
 
+### 2\. Data Curation
 
-
-\- Adjusted p-value < 0.05
-
-\- |logFC| > 1
-
-
-
-These criteria ensure both statistical significance and biological relevance.
+- Removed duplicate entries
+- Filtered compounds lacking PubChem ID or valid identifiers
+- Verified SMILES structures
+- Removed invalid or merged entries (e.g., mixture containing synthetic drug component)
 
 
+Final curated dataset: 121 compounds
 
-\[I] GSE42568: Total DEGs - 6417; Upregulated - 3063; Downregulated - 3354
+### 3\. CMAUP Croos-validation
 
-\[II] GSE65194: Total DEGs - 7785; Upregulated - 2573; Downregulated - 5212
+Tool used: CMAUP;
 
-\[III] GSE70947: Total DEGs - 646; Upregulated - 321; Downregulated - 325
+- Queried Rauvolfia serpentina
+- Retrieved associated compounds and known targets
+- Compared results with curated dataset
 
-### 2\. Common Gene Identification
+Result:
 
-Method: Venn diagram;
-Tool used: Venny 2.1.0 (https://bioinfogp.cnb.csic.es/tools/venny/);
-Result: 124 common DEGs found
+- Confirmed consistency of phytochemical dataset
+- No additional unique compounds identified
+- Used as validation layer rather than primary data source
 
-### 3\. PPI Network Construction
-
-Tool used: STRING;
-
-Network stats:
-\[I] number of nodes - 122
-\[II] number of edges - 145
-\[III] average node degree - 2.38
-\[IV] PPI enrichment p-value - 8.51e-07
 
 ### 4\. Hub Gene Identification
 
