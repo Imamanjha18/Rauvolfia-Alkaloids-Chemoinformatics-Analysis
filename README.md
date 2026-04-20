@@ -31,22 +31,25 @@ This project integrates multiple bioinformatics and chemoinformatics approaches 
 
 ## Dataset Used
 
-Dataset          Description
+### Source Databases
 
-1. GSE42568 -    Gene expression profiling of 104 breast cancer and 17 normal breast biopsies.
-2. GSE65194 -    Gene expression profiling of 130 breast cancer samples (41 TNBC ; 30 Her2 ; 30 Luminal B and 29 Luminal A),                   11 normal breast tissue samples and 14 TNBC cell lines.
-3. GSE70947 -    Gene expression profiling of 296 total samples: 148 breast adenocarcinoma, 148 paired adjacent normal                         breast tissue
+1. IMPPAT – Indian Medicinal Plants, Phytochemistry And Therapeutics
+2. NPASS – Natural Product Activity & Species Source Database
+3. CMAUP – Collective Molecular Activities of Useful Plants
 
-All datasets were obtained from NCBI GEO (https://www.ncbi.nlm.nih.gov/geo/).
+### Organism
 
-## Tools \& Resources
+Rauvolfia serpentina
 
-1. STRING - PPI network construction (https://string-db.org)
-2. Cytoscape - Network visualization (https://cytoscape.org/)
-3. cytoHubba - Hub gene identification (https://apps.cytoscape.org/apps/cytohubba)
-4. MCODE - Module detection (https://apps.cytoscape.org/apps/mcode)
-5. NetworkAnalyst - TF and miRNA networks (https://www.networkanalyst.ca/)
-6. Enrichr - Drug enrichment analysis (https://maayanlab.cloud/Enrichr/)
+### Dataset Summary
+
+|Step|Output|
+|-|-|
+|Total compounds collected |16605|
+|Unique compounds after curation |124|
+|Alkaloid selected|8|
+|Final compounds for analysis |8|
+
 
 ## Methodology
 
