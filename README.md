@@ -50,7 +50,7 @@ Rauvolfia serpentina
   |Total compounds collected |285|
   |Unique compounds after curation |121|
   |Alkaloid selected|67|
-  |Final compounds for analysis |12|
+  |Final compounds for analysis |11|
   
 ## Tools & Resources
 1. SwissADME – Drug-likeness prediction (https://www.swissadme.ch/)
@@ -140,7 +140,7 @@ Selection based on PCA distribution:
 Final selected compounds:
   
 RS_02, RS_04, RS_05, RS_13, RS_14, RS_18,
-RS_21, RS_24, RS_44, RS_54, RS_40, RS_65
+RS_24, RS_44, RS_54, RS_40, RS_65
 
 
 ### 8\. Target Prediction
@@ -179,7 +179,7 @@ Node classification based on degree centrality:
 |-|-|
 |Curated compounds|121|
 |Alkaloid Selected|67|
-|Final compounds |12|
+|Final compounds |11|
 |Major hub targets |DRD2, OPRM1, HTR2A|
 |Dominant target class |GPCR|
 
